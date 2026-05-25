@@ -11,8 +11,8 @@ install(TARGETS design DESTINATION bin)
 
 if(BUILD_TESTS)
     enable_testing()
-    add_executable(test tests/test.cpp)
-    add_test(NAME test COMMAND test)
+    add_executable(testing tests/test.cpp)
+    add_test(NAME testing COMMAND testing)
 endif()
 
 set(DESIGN_VERSION 0.1)
