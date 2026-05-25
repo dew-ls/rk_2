@@ -1,0 +1,26 @@
+name: CI
+
+on:
+    push:
+        tags:
+            - 'v*'
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: action/checkout@v4
+
+            - run: sudo apt install -y cmake g++
+
+            - run: cmake -S . -B build -DCPACK_GENERATOR=DEB -DBUILD_TESTS=ON -DCMAKE_BUILD_TYPE=Debug
+
+            - run: cmake --build build
+
+            - run: ctest --test-dir build --output-on-failure
+
+            - run: cmake --build build --target package
+
+            - uses: softprops/action-gh-release@v2
+              if: startsWith(github.ref, 'refs/tags/')
+              with:
+                files: build/*.deb
