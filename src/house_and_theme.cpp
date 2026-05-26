@@ -1,7 +1,7 @@
 #include <iostream>
 #include <memory>
 #include <string>
-
+#include <cstdint>
 struct Color
 {
     Color(std::uint8_t R, std::uint8_t G, std::uint8_t B)
