@@ -12,7 +12,7 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Install dependencies
-              run: sudo apt-get install -y cmake ligtest-dev
+              run: sudo apt-get install -y cmake libgtest-dev
 
             - name: Configure
               run: cmake -S . -B build --fresh -DCPACK_GENERATOR=DEB -DBUILD_TESTS=ON -DCMAKE_BUILD_TYPE=Debug
