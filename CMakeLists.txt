@@ -16,4 +16,4 @@ if(BUILD_TESTS)
 endif()
 
 set(DESIGN_VERSION 1.0.0)
-include(CPackConfig)
+include(CPackConfig.cmake)
