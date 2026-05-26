@@ -16,7 +16,7 @@ if(BUILD_TESTS)
     )
     FetchContent_MakeAvailable(googletest)
     add_executable(testing tests/test.cpp)
-    add_test(NAME testing COMMAND testing)
+    add_test(NAME testing COMMAND design)
 endif()
 
 set(DESIGN_VERSION 1.0.0)
