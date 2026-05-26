@@ -1,4 +1,6 @@
 set(CPACK_PACKAGE_NAME "design")
 set(CPACK_PACKAGE_VERSION ${DESIGN_VERSION})
-set(CPACK_PACKAGE_MAINTAINER "dew-ls")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "dew-ls")
+set(CPACK_PACKAGE_VENDOR "dew-ls")
+set(CPACK_PACKAGE_CONTACT "artemsuprankov6388@gmail.com")
 include(CPack)
