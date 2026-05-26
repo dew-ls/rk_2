@@ -15,7 +15,7 @@ jobs:
               run: sudo apt install -y cmake
 
             - name: Configure
-              run: cmake -S . -B build -DCPACK_GENERATOR=DEB -DBUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Debug
+              run: cmake -S . -B build -DCPACK_GENERATOR=DEB -DBUILD_TESTS=ON -DCMAKE_BUILD_TYPE=Debug
 
             - name: Build
               run: cmake --build build
