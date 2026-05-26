@@ -15,5 +15,5 @@ if(BUILD_TESTS)
     add_test(NAME testing COMMAND testing)
 endif()
 
-set(DESIGN_VERSION 0.1)
-include(CPackConfig.cmake)
+set(DESIGN_VERSION 1.0.0)
+include(CPackConfig)
